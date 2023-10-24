@@ -13,11 +13,11 @@ const questions = [
     {
         type:"input",
         name:"description",
-        message:"What is the description of your project?"
+        message:"What is the description of your project?",
     },
     {
         type:"input",
-        name:"Motivation",
+        name:"motivation",
         message:"What was your motivation?"
     },
     {
@@ -27,13 +27,28 @@ const questions = [
     },
     {
         type:"input",
-        name:"Problem",
+        name:"problem",
         message:"What problem does it solve?"
     },
     {
         type:"input",
         name:"learn",
         message:"What did you learn?"
+    },
+    {
+        type:"input",
+        name:"steps",
+        message:"What are the stepts to install the README generation Mark Down File?, type all instructions here"
+    },
+    {
+        type:"input",
+        name:"license",
+        message:"Choose a license"
+    },
+    {
+        type:"input",
+        name:"dataalt",
+        message:"video application usage"
     },
 ];
 
@@ -55,6 +70,7 @@ function init() {
     inquirer.prompt(questions)
     .then((answers)=>{
         console.log(answers)
+        // console.log("display bp")
         writeToFile(answers)
     })
 }
