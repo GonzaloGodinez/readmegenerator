@@ -1,32 +1,55 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) { 
+  if (!license) {
+    return
+  }
+  const badge = `![Static Badge](https://img.shields.io/badge/license-${license}-blue)`
+return badge
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  if (license==="MIT") {
+    return `[Link to License](https://choosealicense.com/licenses/mit/)`
+  }
+  else if (license==="Apache") {
+  return `[Link to License](https://choosealicense.com/licenses/mit/)`
+}
+else if (license==="Gnu") {
+  return `[Link to License](https://choosealicense.com/licenses/mit/)`
+}
+ else if  (license==="None") {
+    return ``
+ }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) { 
+  if (license==="MIT") {
+    return `short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.`
+  }
+  else if (license==="Apache") {
+  return `A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.`
+}
+else if (license==="Gnu") {
+  return `Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.`
+}
+ else if  (license==="None") {
+    return ``
+ }
+}
 
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   
-  //
-  /* const installReadme = {
-    
-    type:"input",
-        name:"installReadme",
-        message:"1.	GUI bash terminal point using CD into project directory",
-        message1:"2. Git clone this repo.",
-        message2:"3. CD into readmegenerator.",
-        message3:"4. Open using text editor, for VS Code, command 'node index.js ",
-  }
-*/
-  //
   return `# ${data.title}
+  
+${renderLicenseBadge(data.license)}
+
 
 ## Description
 ${data.description}
@@ -35,6 +58,12 @@ ${data.why}
 ${data.problem}
 ${data.learn}
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+
 ## Installation
 ${data.steps}
 
@@ -42,28 +71,15 @@ ${data.steps}
 ![video application usage](./assets/images/readme-top-ss)
 
 ## License
+${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)}
 
-MIT License
+## Questions
 
-Copyright (c) [2023] [Gonzalo Godinez Luna]
+- Github:${data.github}
+- Email:${data.email} 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 `;
 }
 

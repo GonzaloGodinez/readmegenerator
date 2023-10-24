@@ -13,7 +13,7 @@ const questions = [
     {
         type:"input",
         name:"description",
-        message:"What is the description of your project?",
+        message:"What is the description of your project?"
     },
     {
         type:"input",
@@ -41,9 +41,10 @@ const questions = [
         message:"What are the stepts to install the README generation Mark Down File?, type all instructions here"
     },
     {
-        type:"input",
+        type:"list",
         name:"license",
-        message:"Choose a license"
+        message:"Choose a license",
+        choices:["MIT","Apache","Gnu","None"]
     },
     {
         type:"input",
