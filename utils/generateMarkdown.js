@@ -42,6 +42,15 @@ else if (license==="Gnu") {
  }
 }
 
+function generateInstall(instList) {
+  for (let i = 0; i < instList.length; i++) {
+    const element = instList[i];
+  if (!steps[i]) {
+    return 
+    const steps = `enter installation steps`
+    return steps
+  }}
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -65,10 +74,10 @@ ${data.learn}
 - [License](#license)
 
 ## Installation
-${data.steps}
+${generateInstall(data.steps)}
 
 ## Usage
-![video application usage](./assets/images/readme-top-ss)
+${data.usage}
 
 ## License
 ${renderLicenseLink(data.license)}

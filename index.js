@@ -48,8 +48,18 @@ const questions = [
     },
     {
         type:"input",
-        name:"dataalt",
-        message:"video application usage"
+        name:"usage",
+        message:"what are the uses for this application"
+    },
+    {
+        type:"input",
+        name:"github",
+        message:"Please enter Github username"
+    },
+    {
+        type:"input",
+        name:"email",
+        message:"Please enter email address"
     },
 ];
 
