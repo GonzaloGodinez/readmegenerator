@@ -38,12 +38,12 @@ const questions = [
     {
         type:"input",
         name:"steps",
-        message:"What are the stepts to install the README generation Mark Down File?, type all instructions here"
+        message:"What are the stepts to install the README generation Mark Down File?"
     },
     {
         type:"list",
         name:"license",
-        message:"Choose a license",
+        message:"Choose a license using up & down arrows",
         choices:["MIT","Apache","Gnu","None"]
     },
     {

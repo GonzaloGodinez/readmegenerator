@@ -15,10 +15,10 @@ function renderLicenseLink(license) {
     return `[Link to License](https://choosealicense.com/licenses/mit/)`
   }
   else if (license==="Apache") {
-  return `[Link to License](https://choosealicense.com/licenses/mit/)`
+  return `[Link to License](https://choosealicense.com/licenses/apache/)`
 }
 else if (license==="Gnu") {
-  return `[Link to License](https://choosealicense.com/licenses/mit/)`
+  return `[Link to License](https://choosealicense.com/licenses/gnu/)`
 }
  else if  (license==="None") {
     return ``
@@ -42,15 +42,16 @@ else if (license==="Gnu") {
  }
 }
 
-function generateInstall(instList) {
-  for (let i = 0; i < instList.length; i++) {
-    const element = instList[i];
+/* function generateInstall(steps) {
+  console.log(steps)
+  for (let i = 0; i < steps.length; i++) {
   if (!steps[i]) {
     return 
     const steps = `enter installation steps`
     return steps
   }}
 }
+*/
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -74,7 +75,7 @@ ${data.learn}
 - [License](#license)
 
 ## Installation
-${generateInstall(data.steps)}
+${data.steps}
 
 ## Usage
 ${data.usage}
@@ -87,7 +88,6 @@ ${renderLicenseSection(data.license)}
 
 - Github:${data.github}
 - Email:${data.email} 
-
 
 `;
 }
