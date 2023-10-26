@@ -1,14 +1,14 @@
 # README
   
-![Static Badge](https://img.shields.io/badge/license-Apache-blue)
+![Static Badge](https://img.shields.io/badge/license-MIT-blue)
 
 
 ## Description
-A
-B
-C
-D
-JS
+This app will allow you to quickly create a professional README for a new project.
+To create a professional README for a new project.
+To provide support to users when entering data using the command prompt line
+Generates a dynamic README file using the command line to provide quick access on the back end when working with different projects.
+This application was developed using JS calls to objects and write a mark down data file. 
 
 ## Table of Contents
 
@@ -17,17 +17,18 @@ JS
 - [License](#license)
 
 ## Installation
-1
+1.	GUI bash terminal point using CD into project directory.2.	Git clone this repo.3.	CD into readmegenerator4.	Open using text editor, for VS Code, at the command line type 'node index.js'
 
 ## Usage
-GEN READ
+Generates a dynamic README file using the command line.
 
 ## License
 [Link to License](https://choosealicense.com/licenses/mit/)
-A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
 ## Questions
 
-- Github:G
-- Email:G 
+- [For any questions, please Contact me @](#Github, #Email)
+- Github:gonzalogodinez.github.io
+- Email:Gonzalo.Godinez@comcast.net 
 
